@@ -1,14 +1,15 @@
 from flask import Flask,request
 import cv2
 import numpy as np
-
 import re
 import base64
-
 app=Flask(__name__)
 @app.route("/api/photo",methods=["GET","POST"])
 def index():
     base=request.form["url"]
+
+    print(base)
+
     base = re.sub("\s", "+", base)
     data = base64.b64decode(base)
     data = np.fromstring(data, np.uint8)

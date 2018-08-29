@@ -40,6 +40,16 @@
 
 6. 开始运行
 
+7. 安装numpy
+    ```
+    pip install numpy
+    ```
+8. 安装 cv2
+
+    ```
+    pip install opencv-python
+    ```
+
 
 
 
