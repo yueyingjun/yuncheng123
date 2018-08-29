@@ -10,10 +10,10 @@
     from flask import Flask,request
     app=Flask(__name__)
     @app.route("/api/photo",methods=["GET","POST"])
-    def index():
-    base=request.form["url"]
-    print(base)
-    return "ok111111111111"
+        def index():
+        base=request.form["url"]
+        print(base)
+        return "ok111111111111"
 
     app.run("localhost",5000)
     ```
