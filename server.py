@@ -7,12 +7,11 @@ app=Flask(__name__)
 @app.route("/api/photo",methods=["GET","POST"])
 def index():
     base=request.form["url"]
-    print(base)
-
     base = re.sub("\s", "+", base)
     data = base64.b64decode(base)
     data = np.fromstring(data, np.uint8)
     img = cv2.imdecode(data, cv2.COLOR_BGR2RGB)
+    print(img)
     width = img.shape[1]
     height = img.shape[0]
     myimg = np.zeros([height, width, 3], np.uint8);
