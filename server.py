@@ -7,7 +7,6 @@ app=Flask(__name__)
 @app.route("/api/photo",methods=["GET","POST"])
 def index():
     base=request.form["url"]
-
     print(base)
 
     base = re.sub("\s", "+", base)

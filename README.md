@@ -50,6 +50,21 @@
     pip install opencv-python
     ```
 
+9. 配置代理
+
+   ```
+   proxyTable: {  //代理的功能   npm run start  8080  falsk 5000
+      '/api': {
+            target: 'http://localhost:5000', // 接口的域名
+            // secure: false,  // 如果是https接口，需要配置这个参数
+            changeOrigin: true, // 如果接口跨域，需要进行这个参数配置
+            pathRewrite: {
+                '^/api': '/api'
+            }
+        }
+    },
+   ```
+
 
 
 
